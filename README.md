@@ -79,22 +79,22 @@ Additionally, functions follow the lowerCamelCase style and types follow the Upp
 The Haskell Prelude contains predefined classes, types, and functions that are implicitly imported into every Haskell program.
 
 -	Booleans
-  o	The boolean type Bool is an enumeration. The basic boolean functions are && (and), || (or), and not. The name otherwise is defined as True to make guarded expressions more readable.
+  -	The boolean type Bool is an enumeration. The basic boolean functions are && (and), || (or), and not. The name otherwise is defined as True to make guarded expressions more readable.
 -	Characters and Strings
-  o	The character type Char is an enumeration whose values represent Unicode characters
-  o	A string is a list of characters
+  -	The character type Char is an enumeration whose values represent Unicode characters
+  -	A string is a list of characters
       type  String  =  [Char]
 -	Lists
-  o	Lists are an algebraic datatype of two constructors, although with special syntax. The first constructor is the null list, written `[]' ("nil"), and the second is `:' ("cons"). 
+  -	Lists are an algebraic datatype of two constructors, although with special syntax. The first constructor is the null list, written `[]' ("nil"), and the second is `:' ("cons"). 
 -	Tuples
-  o	Tuples are algebraic datatypes with special syntax with each tuple having a single constructor
-  o	The constructor for a tuple is written by omitting the expressions surrounding the commas; thus (x,y) and (,) x y produce the same value. The same holds for tuple type constructors; thus, (Int,Bool,Int) and (,,) Int Bool Int denote the same type.
+  -	Tuples are algebraic datatypes with special syntax with each tuple having a single constructor
+ 	- The constructor for a tuple is written by omitting the expressions surrounding the commas; thus (x,y) and (,) x y produce the same value. The same holds for tuple type constructors; thus, (Int,Bool,Int) and (,,) Int Bool Int denote the same type.
 -	The Unit Datatype
-  o	Functions are an abstract type: no constructors directly create functional values. The following simple functions are found in the Prelude: id, const, (.), flip, ($), and until.
+  -	Functions are an abstract type: no constructors directly create functional values. The following simple functions are found in the Prelude: id, const, (.), flip, ($), and until.
 -	The IO and IOError Types
-  o	The IO type serves as a tag for operations (actions) that interact with the outside world. The IO type is abstract: no constructors are visible to the user. IO is an instance of the Monad and Functor classes. 
+  -	The IO type serves as a tag for operations (actions) that interact with the outside world. The IO type is abstract: no constructors are visible to the user. IO is an instance of the Monad and Functor classes. 
 -	Other Types
-  o	The Maybe type is an instance of classes Functor, Monad, and MonadPlus. The Ordering type is used by compare in the class Ord. The functions maybe and either are found in the Prelude.
+  - The Maybe type is an instance of classes Functor, Monad, and MonadPlus. The Ordering type is used by compare in the class Ord. The functions maybe and either are found in the Prelude.
 
 Conversion between numerical types in Haskell must be done explicitly as can be seen in the data-types code. This is unlike many traditional languages (such as C or Java) that automatically coerce between numerical types.
 
