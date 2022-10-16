@@ -102,7 +102,7 @@ Conversion between numerical types in Haskell must be done explicitly as can be 
 
 Bool type in Haskell contains the two logical values: ```True``` and ```False```
 
-The following conditional statements are available in Haksell as can be seen in the folder ```control-statements'
+The following conditional statements are available in Haksell as can be seen in the folder ```control-statements```
 - if/else
 - if/then/else
 - if/elseif/else
