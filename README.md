@@ -98,6 +98,20 @@ The Haskell Prelude contains predefined classes, types, and functions that are i
 
 Conversion between numerical types in Haskell must be done explicitly as can be seen in the data-types code. This is unlike many traditional languages (such as C or Java) that automatically coerce between numerical types.
 
+## Control Statements and boolean values
+
+Bool type in Haskell contains the two logical values: ```True``` and ```False```
+
+The following conditional statements are available in Haksell as can be seen in the folder ```control-statements'
+- if/else
+- if/then/else
+- if/elseif/else
+- case statements
+
+For ```case statements```, break is not necessary to get out of them.
+
+The ```||``` and ```&&``` operators are control structures and they evaluate the first argument and then the second argument only if needed. 
+
 
 
 
