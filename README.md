@@ -112,6 +112,125 @@ For ```case statements```, break is not necessary to get out of them.
 
 The ```||``` and ```&&``` operators are control structures and they evaluate the first argument and then the second argument only if needed. 
 
+## Functions 
+
+Haskell has its own functional definition and declaration separately.
+- Function declaration consists of the function name and its argument list along with its output.
+- Function definition is where you actually define a function.
+
+```
+doubleNum :: Int -> Int
+doubleNum n = 2*n
+```
+
+Here, the first line specifies the type of the function and the second line tells us how the output of doubleNum depends on its input. 
+
+Haskell starts compiling the code from the main method. 
+
+```
+main = do 
+   putStrLn "The double of the number is:"  
+   print(doubleNum 2)    --calling a function 
+```
+
+The code will generate the following output −
+
+```
+The double of the number is:
+4
+```
+
+We are not restricted to having single line definitions for functions. We can use multiple definitions combined with implicit **pattern matching**. For instance consider the function:
+
+
+```
+power :: Float -> Int -> Float
+power x 0 = 1.0
+power x n =  x * (power x (n-1))
+```
+
+Here, the first equation is used if the second argument to power is 0. If the second argument is not 0, the first definition does not match, so we proceed to the second definition. When multiple definitions are provided, they are scanned in order from top to bottom. This is usually used with haskell recursive functions
+
+
+In addition, there is no difference between "pass-by-value" and "pass-by-reference" in Haskell, because it's not possible to assign to a variable in these languages. It's not possible to have changes to a method parameter in and values are immutable.
+
+Haskell use the same lexical scoping as most other languages.
+
+```
+z=1
+```
+Results in a value referenced through z in the global scope, whereas
+
+```
+double z = z + z
+```
+
+will result in z being lexically scoped to the function double. 
+
+
+## Loops
+
+-	Haskell doesn’t have built-in functions of loops like other languages. However, as an alternate recursion can be used to simulate different types of loops. Like a regular recursion there needs to be a base condition so that the recursion doesn't get stuck in an infinite loop.
+
+
+To implement the following **For loop**
+
+```
+==> For loop
+
+for (i = 0; i < 10; i + = 2)
+{
+    do something
+}
+```
+a user defined recursive function can be used.
+
+```
+forLoop :: Int -> Int -> Int -> IO()
+forLoop loopNum maxLoopNum value =
+   if loopNum < maxLoopNum
+      then do
+         print loopNum
+         forLoop (loopNum+value) maxLoopNum value
+   else putStrLn "Completed the loop"
+```
+
+**For Each**
+
+```
+foreach (char c in string) 
+{
+   num = num+1
+}
+```
+
+Here we use pattern matching
+```
+forEach :: String -> Int
+forEach [] = 0
+forEach string = 1 + forEach string
+```
+
+**While loop**
+
+```
+While (a%10 !=0) {
+  a = a+1
+}
+```
+
+```
+whileLoop :: Int -> IO ()
+whileLoop a =
+   if a `mod` 10 /=0
+   then do
+      print a
+      whileLoop (a+1)
+   else 
+      putStrLn "Completed the loop"
+```
+
+
 
 
 
@@ -120,5 +239,9 @@ References
 - https://wiki.haskell.org/Keywords
 - https://www.compsuccess.com/is-haskell-dynamically-typed/
 - http://www2.informatik.uni-freiburg.de/~thiemann/haskell/haskell98-report-html/basic.html
+- https://www.educative.io/answers/loops-in-haskell-using-recursion
+- https://www.tutorialspoint.com/haskell/haskell_functions.htm
+https://www.cmi.ac.in/~madhavan/courses/pl2009/lecturenotes/lecture-notes/node70.html
+
 
 
