@@ -230,6 +230,23 @@ whileLoop a =
       putStrLn "Completed the loop"
 ```
 
+## Classes and Objects
+
+In Haskell, you can define a ```typeclass``` which is different from an object oriented class. Using the keyword ```class``` we can declare function names and type signatures which can be instantiated elsewhere for a particular data type.
+
+Here:
+- **Typeclasses are sets of type**
+- **Types are sets of values**
+ 
+Which can be analogous to java:
+
+- **Java: Object → Class → Interface**
+- **Haskell: Value → Type → Typeclass**
+
+Typeclasses aren't the only way to define an interface. We can also define a data structure that has the functions as fields.
+
+Haskell doesn’t have inheritance because it doesn’t have objects. It also doesn’t allow you to ```subclass``` a ```type```, but the same effect of inheritance can be obtained by using ```typeclasses```.
+
 
 
 
@@ -241,7 +258,11 @@ References
 - http://www2.informatik.uni-freiburg.de/~thiemann/haskell/haskell98-report-html/basic.html
 - https://www.educative.io/answers/loops-in-haskell-using-recursion
 - https://www.tutorialspoint.com/haskell/haskell_functions.htm
-https://www.cmi.ac.in/~madhavan/courses/pl2009/lecturenotes/lecture-notes/node70.html
+- https://www.cmi.ac.in/~madhavan/courses/pl2009/lecturenotes/lecture-notes/node70.html
+- https://www.youtube.com/watch?v=x3uF7fcQwWE
+- https://stackoverflow.com/questions/5414323/does-haskell-support-object-oriented-programming
+- https://mmhaskell.com/haskell-data/inheritance
+
 
 
 
